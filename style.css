@@ -9,6 +9,15 @@
     --font: 'Josefin Sans', sans-serif;
 }
 
+*, *::before, *::after{
+    box-sizing: inherit;
+}
+
+html{
+    box-sizing: border-box;
+    font-size: 100%;
+}
+
 body{
     font-family: var(--font);
 }
@@ -110,7 +119,58 @@ body{
     height: 80%;
 }
 
-
 .hide{
     display: none;
+}
+
+/*MEDIA QUERIES*/
+@media only screen and (max-width: 35rem){
+    html{
+        font-size: 85%;
+    }
+
+    .container{
+        max-width: 90%;
+        height: 90%;
+        padding: 2rem 0;
+    }
+
+    .container__sign-in, .container__sign-up{
+        flex-direction: column;
+    }
+
+    .form{
+        width: 70%;
+    }
+
+    .line{
+        background-color: var(--blue);
+        height: 2px;
+        width: 80%;
+        margin-bottom: 1rem;
+    }
+
+    .form > button{
+        height: 3rem;
+        width: 7rem;
+    }
+
+    .sign-up-section > .sign-up-btn, .sign-in-section > .sign-in-btn{
+        height: 4rem;
+        border-radius: 27px;
+    }
+
+    .sign-in-section {
+        margin-bottom: 3rem;
+    }
+}
+
+@media only screen and (max-width: 64rem){
+    html{
+        font-size: 80%;
+    }
+
+    .container{
+        max-width: 80%;
+    }
 }
